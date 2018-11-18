@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="WarsawMetro" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Dbw-n2-8a4">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <subviews>
+                                    <imageView multipleTouchEnabled="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="WarsawMetro" translatesAutoresizingMaskIntoConstraints="NO" id="0kl-tM-ObM">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                    </imageView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="0kl-tM-ObM" firstAttribute="top" secondItem="Dbw-n2-8a4" secondAttribute="top" id="5dU-n1-JXw"/>
+                                    <constraint firstItem="0kl-tM-ObM" firstAttribute="leading" secondItem="Dbw-n2-8a4" secondAttribute="leading" id="Y8g-XF-Rc0"/>
+                                    <constraint firstAttribute="trailing" secondItem="0kl-tM-ObM" secondAttribute="trailing" id="gSg-Tj-SRY"/>
+                                    <constraint firstItem="0kl-tM-ObM" firstAttribute="centerY" secondItem="Dbw-n2-8a4" secondAttribute="centerY" id="hMU-kO-Vqp"/>
+                                    <constraint firstItem="0kl-tM-ObM" firstAttribute="centerX" secondItem="Dbw-n2-8a4" secondAttribute="centerX" id="nAK-9S-7Mw"/>
+                                    <constraint firstAttribute="bottom" secondItem="0kl-tM-ObM" secondAttribute="bottom" id="rfr-jC-kOU"/>
+                                </constraints>
+                                <connections>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="h9I-5P-G01"/>
+                                </connections>
+                            </scrollView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3lM-fR-yit" userLabel="tabBar">
+                                <rect key="frame" x="0.0" y="597" width="375" height="70"/>
+                                <color key="backgroundColor" white="0.78618706597222221" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0Lf-qc-PRK" userLabel="metroButton">
+                                <rect key="frame" x="0.0" y="597" width="187.5" height="70.5"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="70" id="PC8-DK-SDl"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                <state key="normal" title="Metro">
+                                    <color key="titleColor" red="1" green="0.27843137254901962" blue="0.20392156862745098" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="metroButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="r8w-gO-kGe"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zyH-2Y-lO7" userLabel="skmButton">
+                                <rect key="frame" x="187.5" y="597" width="187.5" height="70"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="70" id="MnN-xi-Y4r"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                <state key="normal" title="SKM">
+                                    <color key="titleColor" red="0.7803921568627451" green="0.83921568627450982" blue="0.90980392156862744" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="skmButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="kOC-9O-GS8"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="0Lf-qc-PRK" firstAttribute="width" secondItem="zyH-2Y-lO7" secondAttribute="width" id="CHD-YZ-vNb"/>
+                            <constraint firstItem="3lM-fR-yit" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="GdA-EQ-YfG"/>
+                            <constraint firstItem="zyH-2Y-lO7" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="Heh-Uu-lHx"/>
+                            <constraint firstItem="zyH-2Y-lO7" firstAttribute="width" secondItem="0Lf-qc-PRK" secondAttribute="width" id="Hjh-wK-CRU"/>
+                            <constraint firstItem="Dbw-n2-8a4" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="LYi-pc-7aK"/>
+                            <constraint firstAttribute="bottom" secondItem="0Lf-qc-PRK" secondAttribute="bottom" id="RCY-nI-EEp"/>
+                            <constraint firstItem="Dbw-n2-8a4" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="U6R-27-b4O"/>
+                            <constraint firstItem="0Lf-qc-PRK" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Vmo-al-nbV"/>
+                            <constraint firstAttribute="bottom" secondItem="0Lf-qc-PRK" secondAttribute="bottom" id="WRC-mq-pE5"/>
+                            <constraint firstItem="zyH-2Y-lO7" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="XDt-g6-F93"/>
+                            <constraint firstItem="zyH-2Y-lO7" firstAttribute="height" secondItem="0Lf-qc-PRK" secondAttribute="height" id="XsZ-Wj-3t8"/>
+                            <constraint firstItem="3lM-fR-yit" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="Xzq-YM-NWn"/>
+                            <constraint firstItem="3lM-fR-yit" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="ZMK-ds-Xra"/>
+                            <constraint firstItem="zyH-2Y-lO7" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="d56-mr-gvF"/>
+                            <constraint firstItem="3lM-fR-yit" firstAttribute="height" secondItem="zyH-2Y-lO7" secondAttribute="height" id="dOO-Rw-z8n"/>
+                            <constraint firstItem="Dbw-n2-8a4" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="git-Ii-8Y8"/>
+                            <constraint firstItem="Dbw-n2-8a4" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="mrD-Ck-Hyy"/>
+                            <constraint firstItem="zyH-2Y-lO7" firstAttribute="leading" secondItem="0Lf-qc-PRK" secondAttribute="trailing" id="zTI-ZO-mUb"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="imageView" destination="0kl-tM-ObM" id="GRP-x6-iOw"/>
+                        <outlet property="metroButtonView" destination="0Lf-qc-PRK" id="Xl3-mT-iGf"/>
+                        <outlet property="scrollView" destination="Dbw-n2-8a4" id="JVF-NI-y8g"/>
+                        <outlet property="skmButtonView" destination="zyH-2Y-lO7" id="S7o-Ti-dzI"/>
+                        <outlet property="tabBar" destination="3lM-fR-yit" id="eHJ-7w-Ah8"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="135.19999999999999" y="131.78410794602701"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="WarsawMetro" width="1488" height="2105"/>
+    </resources>
+</document>
